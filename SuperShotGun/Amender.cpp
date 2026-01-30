@@ -4,6 +4,7 @@
 #include <string>
 #include <cstdio>
 
+//this is a premender lol
 void Amender::amendAtPoint(std::string pointToAmend, std::string AddedAmend) {
     std::ifstream inputFile("index.html");
     std::ofstream tempFile("temp.txt");
@@ -12,10 +13,10 @@ void Amender::amendAtPoint(std::string pointToAmend, std::string AddedAmend) {
     std::string newLineContent = AddedAmend;
     if (!inputFile || !tempFile) return;
     while (std::getline(inputFile, line)) {
-        tempFile << line << "\n";
         if (line == pointToAmend) {
-            tempFile << AddedAmend << "\n";
+            line = AddedAmend + line;
         }
+        tempFile << line << "\n";
     }
     inputFile.close();
     tempFile.close();

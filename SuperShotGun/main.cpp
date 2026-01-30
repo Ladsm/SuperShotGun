@@ -78,6 +78,9 @@ int main(int argc, char* argv[]) {
         else if(command == "ls" || command == "dir") {
             system("dir");
         }
+        else if (command == "") {
+
+        }
         else {
             HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(color, 4);

@@ -38,7 +38,7 @@ void version() {
 	std::cout << "  ###########         ## ##                                     \n";
 	std::cout << " ##########            ###     ";
 	SetConsoleTextAttribute(color, 7);
-	std::cout << "version : 1,00,1                 \n";//change this evry new commit
+	std::cout << "version : 1,00,1                 \n";//change this evry new commit or I will come for you
 	SetConsoleTextAttribute(color, 6);
 	std::cout << " #####           ";
 	SetConsoleTextAttribute(color, 14);

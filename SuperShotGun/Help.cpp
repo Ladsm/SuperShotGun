@@ -36,7 +36,7 @@ void help() {
 	std::cout << "image : Asks for image filepath or link and adds it to index.html\n"; changecolor(4);
 	std::cout << "link : Asks for link and what text to display as link(if left empty i'll just be the link displayed)\n"; changecolor(5);
 	std::cout << "footer : Basicly just paragraph but at the bottom of your site\n"; changecolor(4);
-	std::cout << "line : Adds a line to your website with the hr tag\n";changecolor(5);
+	std::cout << "line : Adds a line to your website with the hr tag\n"; changecolor(5);
 	std::cout << "center : centers evrything in your website\n"; changecolor(4);
 	std::cout << "br : breaks line\n"; changecolor(5);
 	std::cout << "exit : exits the program... :(\n"; changecolor(4);

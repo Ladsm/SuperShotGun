@@ -1,4 +1,4 @@
-#include "Amender.h"
+#include "Amender.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>

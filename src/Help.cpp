@@ -1,8 +1,11 @@
 #include <iostream>
+#if defined(_WIN32)
 #include <Windows.h>
+#endif
 //std::cout << "\n";
 
 static void changecolor(int cOlOr) {
+	#if defined(_WIN32)
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	switch (cOlOr) {
 	case 1:
@@ -24,6 +27,8 @@ static void changecolor(int cOlOr) {
 		SetConsoleTextAttribute(color, 7);
 		break;
 	}
+	#elif defined(__linux__)
+	#endif
 }
 
 void help() {

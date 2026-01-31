@@ -3,7 +3,9 @@
 #include "Amender.hpp"
 #include "resource.h"
 #include <iostream>
+#if defined(_WIN32)
 #include <Windows.h>
+#endif
 #include <string>
 #include <fstream>
 
@@ -77,10 +79,14 @@ int main(int argc, char* argv[]) {
             version();
         }
         else if (command == "exit") {
-            exit(0);
+            return 0;
         }
         else if (command == "clear") {
+            #if defined(_WIN32)
             system("cls");
+            #elif defined(__linux__)
+            system("clear");
+            #endif
         }
         else if(command == "ls" || command == "dir") {
             system("dir");
@@ -89,10 +95,14 @@ int main(int argc, char* argv[]) {
 
         }
         else {
+            #if defined(_WIN32)
             HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(color, 4);
+            #endif
             std::cout << command << " : The term " << R"(')" << command << R"(')" << "is not recognized as the name of a function.\nCheck if the spelling of the command is correct and try again.\n";
+            #if defined(_WIN32)
             SetConsoleTextAttribute(color, 7);
+            #endif
         }
     }
     return 0;

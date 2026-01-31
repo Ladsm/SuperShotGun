@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="SuperShotGun/SuperShotGun.vcxproj" />
+  <Project Path="SuperShotGun/SuperShotGun.vcxproj" Id="4fdf978a-d3c0-4aa4-81bc-f430339691f5" />
 </Solution>

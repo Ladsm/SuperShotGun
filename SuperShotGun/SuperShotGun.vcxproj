@@ -133,9 +133,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Amender.h" />
-    <ClInclude Include="File.h" />
-    <ClInclude Include="Help.h" />
+    <ClInclude Include="Amender.hpp" />
+    <ClInclude Include="File.hpp" />
+    <ClInclude Include="Help.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

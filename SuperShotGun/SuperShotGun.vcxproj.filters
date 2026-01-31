@@ -29,13 +29,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="File.h">
+    <ClInclude Include="File.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Help.h">
+    <ClInclude Include="Help.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Amender.h">
+    <ClInclude Include="Amender.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

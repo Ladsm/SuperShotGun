@@ -1,6 +1,7 @@
 #include "File.hpp"
 #include "Help.hpp"
 #include "Amender.hpp"
+#include "resource.h"
 #include <iostream>
 #include <Windows.h>
 #include <string>

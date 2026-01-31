@@ -1,9 +1,9 @@
 #include <iostream>
 #include <Windows.h>
 //std::cout << "\n";
-HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 
 static void changecolor(int cOlOr) {
+	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	switch (cOlOr) {
 	case 1:
 		SetConsoleTextAttribute(color, 7);
@@ -36,6 +36,8 @@ void help() {
 	std::cout << "image : Asks for image filepath or link and adds it to index.html\n"; changecolor(4);
 	std::cout << "link : Asks for link and what text to display as link(if left empty i'll just be the link displayed)\n"; changecolor(5);
 	std::cout << "footer : Basicly just paragraph but at the bottom of your site\n"; changecolor(4);
+	std::cout << "line : Adds a line to your website with the hr tag\n";changecolor(5);
+	std::cout << "center : centers evrything in your website\n"; changecolor(4);
 	std::cout << "br : breaks line\n"; changecolor(5);
 	std::cout << "exit : exits the program... :(\n"; changecolor(4);
 	std::cout << "clear : clears the console\n"; changecolor(5);
@@ -45,36 +47,36 @@ void help() {
 }
 
 void version() {
-	SetConsoleTextAttribute(color, 6);
+	changecolor(2);
 	std::cout << "                          ######################################\n";
 	std::cout << "##################    ######";
-	SetConsoleTextAttribute(color, 7);
+	changecolor(1);
 	std::cout << "Super ShotGun";
-	SetConsoleTextAttribute(color, 6);
+	changecolor(2);
 	std::cout << "####################   \n";
 	std::cout << "####################################################            \n";
 	std::cout << "  ################";
-	SetConsoleTextAttribute(color, 7);
+	changecolor(1);
 	std::cout << "Static Site Generator";
-	SetConsoleTextAttribute(color, 6);
+	changecolor(2);
 	std::cout << "#####                    \n";
 	std::cout << "  ########################################                      \n";
 	std::cout << "  ###########         ## ##                               ";
-	SetConsoleTextAttribute(color, 4);
+	changecolor(3);
 	std::cout << "@     \n";
-	SetConsoleTextAttribute(color, 6);
+	changecolor(2);
 	std::cout << " ##########            ###     ";
-	SetConsoleTextAttribute(color, 7);
-	std::cout << "version : 1,00,1           ";//change this evry new commit or I will come for you
-	SetConsoleTextAttribute(color, 4);
+	changecolor(1);
+	std::cout << "version : 1,00,3           ";//change this evry new commit or I will come for you
+	changecolor(3);
 	std::cout << "@     \n";
-	SetConsoleTextAttribute(color, 6);
+	changecolor(2);
 	std::cout << " #####           ";
-	SetConsoleTextAttribute(color, 14);
+	changecolor(4);
 	std::cout << "#";
-	SetConsoleTextAttribute(color, 4);
+	changecolor(3);
 	std::cout << "@@";
-	SetConsoleTextAttribute(color, 14);
+	changecolor(4);
 	std::cout << "                                      #     \n";
-	SetConsoleTextAttribute(color, 7);
+	changecolor(1);
 }

@@ -63,7 +63,13 @@ int main(int argc, char* argv[]) {
             std::cout << "Please provide the text you want to be as your footer : ";
             std::getline(std::cin, footertext);
             std::string footer = "<p>" + footertext + "</p>";
-            amender.amendAtPoint("<main>", footer);
+            amender.amendAtPoint("<footer>", footer);
+        }
+        else if (command == "line") {
+            amender.amendAtPoint("<main>", "<hr>");
+        }
+        else if (command == "center") {
+            amender.amendAtPoint("<style>", "body{text-align: center;}");
         }
         // boring stuff
         else if (command == "version") {

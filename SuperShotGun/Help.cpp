@@ -67,7 +67,7 @@ void version() {
 	changecolor(2);
 	std::cout << " ##########            ###     ";
 	changecolor(1);
-	std::cout << "version : 1,00,3           ";//change this evry new commit or I will come for you
+	std::cout << "version : 1,01,3           ";//change this evry new commit or I will come for you
 	changecolor(3);
 	std::cout << "@     \n";
 	changecolor(2);

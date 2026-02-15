@@ -20,10 +20,13 @@ if(WIN32)
 add_executable(SuperShotGun ${PROJECT_SOURCES})
 if(WIN32)
     target_link_libraries(SuperShotGun PRIVATE 
+        winmm
         User32.lib
         Gdi32.lib
         Shell32.lib
         Advapi32.lib
+        -Wl,-Bstatic,--whole-archive -lpthread -Wl,-Bdynamic,--no-whole-archive
     )
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++")
 endif()
 target_include_directories(SuperShotGun PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

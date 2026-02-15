@@ -15,7 +15,8 @@ set(PROJECT_SOURCES
 )
 if(WIN32)
     list(APPEND PROJECT_SOURCES "src/resource.h")
-endif()
+    list(APPEND PROJECT_SOURCES "src/SuperShotGun.rc")
+  endif()
 add_executable(SuperShotGun ${PROJECT_SOURCES})
 if(WIN32)
     target_link_libraries(SuperShotGun PRIVATE 
